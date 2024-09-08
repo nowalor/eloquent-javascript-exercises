@@ -26,4 +26,29 @@ function fizzBuzz(){
     }
 }
 
-fizzBuzz()
+//fizzBuzz()
+
+function chessBoard() {
+    let size = 8
+    let chessBoardString = ''
+    for(let i = 0; i < size; i++) {
+        let previousChar
+        if(i % 2 === 0) {
+            previousChar = '#'
+        } else {
+            previousChar = ''
+        }
+
+        for (let x = 0; x < size; x++) {
+            chessBoardString += previousChar
+            previousChar = previousChar === '#' ? '' : '#'
+        }
+
+        chessBoardString += '\n'
+    }
+
+
+    console.log(chessBoardString)
+}
+
+chessBoard()
